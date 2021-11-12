@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+
+:root{
+  --cor-primaria: rgb(86,171,47);
+  --cor-secundaria: rgb(168,224,99);
+}
+
+body{
+  background: var(--cor-secundaria);
+}
+
+h1, #navBarDefault a.navbar-brand{
+  color: var(--cor-primaria);
+}
+
+#navBarDefault .navbar-toggler {
+  color: var(--cor-primaria);
+  border-color: var(--cor-primaria);
+}
+
+#containerDefault{
+  padding-top: 4rem;
+}
+
+#containerDefault .card{
+  background: #EFEFEF;
+  border: 2px solid rgba(90, 174, 50, 0.2);
+}
+
+/* CALCULADORA */
+.calc{
+  font-family: 'Roboto Mono', monospace;
+}
+
+.calc .calcDisplay{
+  border-bottom: 2px solid rgba(168, 224, 99, 0.23);
+  padding-bottom: 4px;
+  margin-bottom: 38px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.calcDisplay div{
+  background-color: #ECECEC;
+  padding: 0 8px;
+  text-align: right;
+  width: 600px;
+  height: 144px;
+  overflow: hidden;
+  font-size: 6.5rem;
+}
+
+@media (max-width: 768px) {
+  .calcDisplay div{
+    font-size: 2rem;
+  }
+}
+
+.calc .calcTeclado{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.calc .calcTeclado > div{
+  display: flex;
+  margin-bottom: 32px;
+}
+
+.calc .calcTeclado .calcItem a{
+  font-family: 'Roboto Mono', monospace;
+  font-size: 45px;
+  color: #535353;
+  padding: 18px 79px;
+  border-radius: 50px;
+  border: 2px solid rgba(83, 83, 83, 0.2); 
+  text-decoration: none;
+  display:block;
+}
+
+.calcItem.calcNum a{  
+  background: rgba(196, 196, 196, 0.5); 
+  margin-right: 32px;
+}
+
+.calcItem.calcOp a{  
+  background: rgba(168, 224, 99, 0.5); 
+}
+
+.calcItem.calcNum a:hover{
+  background: rgba(4, 4, 4, 0.16);
+}
+.calcItem.calcOp a:hover{
+  background: rgba(134, 181, 78, 0.16);
+}
