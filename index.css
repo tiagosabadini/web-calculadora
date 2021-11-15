@@ -27,6 +27,10 @@ h1, #navBarDefault a.navbar-brand{
   border: 2px solid rgba(90, 174, 50, 0.2);
 }
 
+.btn-abrir-menu{
+  margin-right: 5px;
+}
+
 /* CALCULADORA */
 .calc{
   font-family: 'Roboto Mono', monospace;
@@ -45,16 +49,17 @@ h1, #navBarDefault a.navbar-brand{
   background-color: #ECECEC;
   padding: 0 8px;
   text-align: right;
-  width: 600px;
+  width: 100%;
   height: 144px;
   overflow: hidden;
   font-size: 6.5rem;
 }
 
-@media (max-width: 768px) {
-  .calcDisplay div{
-    font-size: 2rem;
-  }
+input[name="display"]{
+  border: none;
+  background: transparent;
+  text-align: right;
+  width: 650px;
 }
 
 .calc .calcTeclado{
@@ -94,4 +99,50 @@ h1, #navBarDefault a.navbar-brand{
 }
 .calcItem.calcOp a:hover{
   background: rgba(134, 181, 78, 0.16);
+}
+
+@media (max-width: 768px) {
+  .calcDisplay div{
+    font-size: 2rem;
+    height: 70px;
+    padding-top: 10px;
+    vertical-align: middle;
+  }
+
+  input[name="display"]{
+    width: 230px;
+  }
+
+  .calc .calcTeclado{
+    justify-content: space-around;
+  }
+
+  .calcItem.calcNum a{  
+    margin-right: 12px;
+  }
+
+  .calc .calcTeclado .calcItem a{
+    font-size: 25px;
+    padding: 18px 22px;
+    border-radius: 50%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 979px) {
+
+  .calcDisplay div{
+    font-size: 2rem;
+    height: 70px;
+    padding-top: 10px;
+  }
+
+  .calcItem.calcNum a{  
+    margin-right: 12px;
+  }
+
+  .calc .calcTeclado .calcItem a{
+    font-size: 25px;
+    padding: 18px 40px;
+    border-radius: 50%;
+  }
 }
